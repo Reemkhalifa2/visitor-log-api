@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -68,12 +69,23 @@ public class VisitorController {
     @PutMapping("/visitors/{id}")
     public Visitor updateVisitor(
             @PathVariable long id,
-            @RequestParam String purpose
+            @RequestBody Visitor updateVisitor
     ) {
 
         return visitorService.updateVisitor(
                 id,
-                purpose
+                updateVisitor
         );
     }
+
+    @GetMapping
+    public ResponseEntity<List<Visitor>> getVisitors(
+            @RequestParam String purpose) {
+
+        return ResponseEntity.ok(
+                visitorService.getVisitorsByPurpose(purpose)
+        );
+    }
+
+
 }

@@ -50,10 +50,24 @@ public class VisitorService {
         return "total: " + count;
     }
 
-    public Visitor updateVisitor(long id, String purpose) {
+    public Visitor updateVisitor(long id, Visitor updateVisitor) {
         Visitor visitor = getVisitorById(id);
-        visitor.setPurpose(purpose);
+        visitor.setName(updateVisitor.getName());
+        visitor.setCompany(updateVisitor.getCompany());
+        visitor.setPurpose(updateVisitor.getPurpose());
         return visitor;
+    }
+
+    public List<Visitor> getVisitorsByPurpose(String purpose) {
+
+        List<Visitor> visitorsByPurpose = new ArrayList<>();
+
+        for (Visitor visitor : visitors) {
+            if (visitor.getPurpose().equalsIgnoreCase(purpose)) {
+                visitorsByPurpose.add(visitor);
+            }
+        }
+        return visitorsByPurpose;
     }
 
 }
