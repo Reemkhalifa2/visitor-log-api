@@ -11,6 +11,8 @@ import java.util.List;
 public class VisitorService {
     private List<Visitor> visitors = new ArrayList<>();
     private Integer count = 0;
+
+
     public List<Visitor> getAllVisitors(){
         return visitors;
     }
@@ -37,16 +39,11 @@ public class VisitorService {
         return visitor;
     }
 
-    public Visitor deleteVisitor(Visitor visitor) {
-        boolean exists = visitors.stream()
-                .anyMatch(v -> v.getId().equals(visitor.getId()));
-        if (exists) {
-            throw new RuntimeException("Visitor ID already exists");
-        }
+    public void deleteVisitor(Long id) {
+        Visitor visitor = getVisitorById(id);
 
         visitors.remove(visitor);
         count--;
-        return visitor;
     }
 
     public String totalVisitors(){
