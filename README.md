@@ -50,3 +50,10 @@ src/main/java
 | POST | `/api/visitors` | Create a new visitor |
 | PUT | `/api/visitors/{id}` | Update visitor information |
 | DELETE | `/api/visitors/{id}` | Delete a visitor |
+
+
+
+##Install docker in VM
+![img.png](img.png)
+###Create image and run the container
+![img_1.png](img_1.png)
