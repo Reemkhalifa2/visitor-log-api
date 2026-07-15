@@ -1,7 +1,6 @@
-package com.example.visitorlog;
+package com.example.visitorlog.model;
 
 import lombok.Data;
-import lombok.Generated;
 
 @Data
 public class Visitor {

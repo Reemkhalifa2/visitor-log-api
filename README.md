@@ -7,9 +7,8 @@ The API allows users to create, retrieve, update, and delete visitor information
 
 The project demonstrates:
 - Spring Boot REST API development
-- JPA/Hibernate database integration
 - CRUD operations
-- Repository and Service layers
+- Service layers
 - RESTful endpoint design
 
 ---
@@ -19,10 +18,7 @@ The project demonstrates:
 - Java 17
 - Spring Boot
 - Spring Web
-- Spring Data JPA
-- Hibernate
 - Maven
-- Database (H2/MySQL depending on configuration)
 
 ---
 
@@ -33,7 +29,6 @@ src/main/java
  └── com.example.visitorlog
       ├── controller   # REST API controllers
       ├── service      # Business logic
-      ├── repository   # Database access layer
       └── model        # Entity classes
 ```
 
@@ -43,13 +38,14 @@ src/main/java
 
 ### Visitor APIs
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/visitors` | Get all visitors |
-| GET | `/api/visitors/{id}` | Get visitor by ID |
-| POST | `/api/visitors` | Create a new visitor |
-| PUT | `/api/visitors/{id}` | Update visitor information |
-| DELETE | `/api/visitors/{id}` | Delete a visitor |
+| Method | Endpoint | Description                |
+|--------|----------|----------------------------|
+| GET    | `/api/visitors` | Get all visitors           |
+| GET    | `/api/visitors/{id}` | Get visitor by ID          |
+| POST   | `/api/visitors` | Create a new visitor       |
+| PUT    | `/api/visitors/{id}` | Update visitor information |
+| DELETE | `/api/visitors/{id}` | Delete a visitor           |
+| GET    | `/api` | Get visitors by purpos     |
 
 ## How to Run the Project
 
