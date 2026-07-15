@@ -53,7 +53,7 @@ src/main/java
 
 
 
-##Install docker in VM
+## Install docker in VM
 ![img.png](img.png)
-###Create image and run the container
+### Create image and run the container
 ![img_1.png](img_1.png)
