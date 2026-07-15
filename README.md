@@ -51,9 +51,48 @@ src/main/java
 | PUT | `/api/visitors/{id}` | Update visitor information |
 | DELETE | `/api/visitors/{id}` | Delete a visitor |
 
+## How to Run the Project
 
+### 1. Clone the repository
 
-##Install docker in VM
+```bash
+git clone <Repo-URL>
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd visitor-log-api
+```
+
+### 3. Build the project
+
+```bash
+mvn clean install
+```
+
+### 4. Run the application
+
+```bash
+mvn spring-boot:run
+```
+
+The application will start on:
+
+```
+http://localhost:8080
+```
+
+---
+
+## Running the JAR File
+
+After building:
+
+```bash
+java -jar target/visitor-log-api.jar
+
+## Install docker in VM
 ![img.png](img.png)
-###Create image and run the container
+### Create image and run the container
 ![img_1.png](img_1.png)
