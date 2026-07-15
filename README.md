@@ -91,7 +91,7 @@ After building:
 
 ```bash
 java -jar target/visitor-log-api.jar
-
+```
 
 ##Install docker in VM
 ![img.png](img.png)
