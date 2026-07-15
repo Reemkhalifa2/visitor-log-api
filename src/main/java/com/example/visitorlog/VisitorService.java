@@ -63,7 +63,7 @@ public class VisitorService {
         List<Visitor> visitorsByPurpose = new ArrayList<>();
 
         for (Visitor visitor : visitors) {
-            if (visitor.getPurpose().equalsIgnoreCase(purpose)) {
+            if (visitor.getPurpose().equals(purpose)) {
                 visitorsByPurpose.add(visitor);
             }
         }
